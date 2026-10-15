@@ -1,0 +1,31 @@
+rule_or_issue,affected_orders,treatment
+customer_record_not_found,769,order retained and missing relationship flagged
+customer_state_normalized,877,trimmed and case-normalized; raw value preserved
+customer_state_unknown,1902,order retained and uncertainty flagged
+delivery_before_approval,812,raw value preserved; parsed value blank or label left null where reliability is affected
+delivery_before_carrier,793,raw value preserved; parsed value blank or label left null where reliability is affected
+delivery_before_purchase,804,raw value preserved; parsed value blank or label left null where reliability is affected
+estimate_before_approval,2,raw value preserved; parsed value blank or label left null where reliability is affected
+missing_or_negative_freight,877,negative/missing component omitted from valid sum and counted; order retained
+missing_or_negative_price,840,negative/missing component omitted from valid sum and counted; order retained
+no_item_rows,142,order retained and missing relationship flagged
+optional_product_data_issue,3197,order retained; invalid/missing value represented by zero plus indicator in features
+order_approved_at_invalid,152,order retained and uncertainty flagged
+order_approved_at_missing,199,order retained and uncertainty flagged
+order_delivered_carrier_date_invalid,149,order retained and uncertainty flagged
+order_delivered_carrier_date_missing,483,order retained and uncertainty flagged
+order_delivered_customer_date_invalid,161,order retained and uncertainty flagged
+order_delivered_customer_date_missing,714,order retained and uncertainty flagged
+order_estimated_delivery_date_invalid,170,order retained and uncertainty flagged
+order_estimated_delivery_date_missing,160,order retained and uncertainty flagged
+order_purchase_timestamp_invalid,165,raw value preserved; parsed value blank or label left null where reliability is affected
+order_purchase_timestamp_missing,168,raw value preserved; parsed value blank or label left null where reliability is affected
+product_record_not_found,904,order retained and missing relationship flagged
+seller_record_not_found,888,order retained and missing relationship flagged
+status_normalized,783,trimmed and case-normalized; raw value preserved
+unlabelled:actual_delivery_invalid,158,order retained; delivery target left null
+unlabelled:actual_delivery_missing,180,order retained; delivery target left null
+unlabelled:estimated_delivery_invalid,163,order retained; delivery target left null
+unlabelled:estimated_delivery_missing,156,order retained; delivery target left null
+unlabelled:impossible_chronology,792,order retained; delivery target left null
+unlabelled:status_not_delivered,2070,order retained; delivery target left null

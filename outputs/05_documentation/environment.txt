@@ -1,0 +1,12 @@
+Generated: 2026-10-15T18:46:14+04:00
+Command: python.exe pipeline.py
+Python: 3.13.5
+SQLite: 3.47.1
+Operating system: Windows-11-10.0.26200-SP0
+Python dependency: matplotlib 3.11.2
+Recorded timestamps: treated as supplied local clock; no timezone conversion
+Resource memory: tracemalloc new Python allocations + sampled whole-process RSS (20ms)
+Intermediates: recursive Python container size of retained stage inputs and result; shared objects once
+Temporary storage: sampled redirected run directory and SQLite journal/WAL/SHM sizes; short-lived files may be missed
+Source SQL SHA256: be413b71f55807bc5ae9532beb5f4f82b8014a09f15fca3e5127935b8533be02
+Database SHA256: c9cfa7a586d61b29a94a62aa52794babeec83b3974c930ffc8e6e0d1ecc0d00c

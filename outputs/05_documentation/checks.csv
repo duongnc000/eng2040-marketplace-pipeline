@@ -1,0 +1,21 @@
+check,status,observed,expected
+one cleaned row per raw order,PASS,20000,20000
+all item rows accounted for,PASS,22662,22662
+valid item price total preserved,PASS,54497743.3,54497743.3
+valid freight total preserved,PASS,10523965.78,10523965.78
+raw item price total preserved,PASS,54446205.77,54446205.77
+raw freight total preserved,PASS,10515059.68,10515059.68
+"feature, ID and label row counts align",PASS,16481/16481/16481,16481
+feature IDs are unique,PASS,16481,16481
+no prohibited field names in predictors,PASS,none,none
+all predictor cells are numeric,PASS,0,0
+no null/NaN/infinite predictor cells,PASS,0,0
+same-calendar-date deliveries are on time,PASS,0,0
+unreliable outcomes are never filled as zero,PASS,0,0
+every order has exactly one saved audit row,PASS,20000,20000
+all retained orders have feature rows,PASS,20000,20000
+supervised_saved feature/ID/label positions match source orders,PASS,aligned,aligned
+all_saved feature/ID/label positions match source orders,PASS,aligned,aligned
+predictor schema matches explicit approval-time feature manifest,PASS,53,53
+documented feature sources are explicitly allowed at approval,PASS,allowed,allowed
+all checks pass,PASS,19,19

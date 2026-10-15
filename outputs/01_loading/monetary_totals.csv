@@ -1,0 +1,5 @@
+measure,source_unit,source_total,comparable_brl_total,rule
+item_price,BRL,54446205.77,54446205.77,sum each item price once
+item_freight,BRL,10515059.68,10515059.68,sum each item freight once
+payment_value,centavos,280524473,2805244.73,divide by 100 once; 20875 payment records; do not multiply by installments
+zero_installment_payments,records,1,,preserved as valid; not changed or rejected

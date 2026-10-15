@@ -1,0 +1,49 @@
+table,column,declared_type,primary_key_position,null_count,distinct_non_null_count,minimum_observed,maximum_observed
+category_translation,product_category_name,TEXT,1,0,73,agro_industria_e_comercio,utilidades_domesticas
+category_translation,product_category_name_english,TEXT,0,2,71,agro_industry_and_commerce,watches_gifts
+customers,customer_id,TEXT,1,0,20000,0002414f95344307404f0ace7a26f1d5,fffeda5b6d849fbd39689bb92087f431
+customers,customer_unique_id,TEXT,0,885,18992,0004bd2a26a76fe21f786e4fbd80607f,fff1bdd5c5e37ca79dd74deeb91aa5b6
+customers,customer_zip_code_prefix,TEXT,0,306,8520,01005,99965
+customers,customer_city,TEXT,0,307,2636,  ADRIANOPOLIS ,zortea
+customers,customer_state,TEXT,0,305,53, ac  ,ZZ
+order_items,order_id,TEXT,1,0,19858,000e562887b1f2006d75e0be9558292e,fffe41c64501cc87c801fd61db3f6244
+order_items,order_item_id,INTEGER,2,0,21,1,21
+order_items,product_id,TEXT,0,0,11906,000791ffc51ec26cd0c6d27db58befaf,fff6177642830a9a94a0f2cba5e476d1
+order_items,seller_id,TEXT,0,0,2942,001cca7ae9ae17fb1caed9dfb1094831,ffff564a4f9085cd26170f4732393726
+order_items,shipping_limit_date,TEXT,0,857,18300,01/01/2018 22:08:31,31/10/2017 23:07:19
+order_items,price,REAL,0,439,3302,-1591.2,2299950.0
+order_items,freight_value,REAL,0,427,4445,-174.49,321460.0
+order_payments,order_id,TEXT,1,0,20000,000e562887b1f2006d75e0be9558292e,fffe41c64501cc87c801fd61db3f6244
+order_payments,payment_sequential,INTEGER,2,0,21,1,21
+order_payments,payment_type,TEXT,0,0,9, BOLETO  ,voucher
+order_payments,payment_installments,INTEGER,0,0,23,-1,24
+order_payments,payment_value,INTEGER,0,945,12270,-218315,672666
+order_reviews,review_id,TEXT,1,0,19941,000359bceee1b6fe876b30d35b5f9ef2,fffefe7a48d22f7b32046421062219d1
+order_reviews,order_id,TEXT,2,0,19853,000e562887b1f2006d75e0be9558292e,fffe41c64501cc87c801fd61db3f6244
+order_reviews,review_score,INTEGER,0,1072,7,0,8
+order_reviews,review_comment_title,TEXT,0,17653,1156, 5 estrelas,🔟 
+order_reviews,review_comment_message,TEXT,0,11782,7513,"
+",👏👏👏👏👏👍😁
+order_reviews,review_creation_date,TEXT,0,590,582,2016-10-15T00:00:00,2018-08-31T00:00:00
+order_reviews,review_answer_timestamp,TEXT,0,562,18248,2016-10-14T00:00:00,2018-10-29T12:27:35
+orders,order_id,TEXT,1,0,20000,000e562887b1f2006d75e0be9558292e,fffe41c64501cc87c801fd61db3f6244
+orders,customer_id,TEXT,0,0,20000,0002414f95344307404f0ace7a26f1d5,fffeda5b6d849fbd39689bb92087f431
+orders,order_status,TEXT,0,0,14,  CANCELED ,unavailable
+orders,order_purchase_timestamp,TEXT,0,168,19652,2016-10-03 21:13:36,2018-10-01 15:30:09
+orders,order_approved_at,TEXT,0,199,19224,2016-10-04 13:26:11,2018-08-29 10:35:16
+orders,order_delivered_carrier_date,TEXT,0,483,18330,2016-10-09 03:45:42,2018-08-31 15:09:00
+orders,order_delivered_customer_date,TEXT,0,714,19092,2016-09-29 15:46:26,2018-10-17 13:22:46
+orders,order_estimated_delivery_date,TEXT,0,160,423,2016-11-23 00:00:00,2018-10-23 00:00:00
+products,product_id,TEXT,1,0,11334,00210e41887c2a8ef9f791ebc780cc36,fff6177642830a9a94a0f2cba5e476d1
+products,product_category_name,TEXT,0,509,121,  AGRO_INDUSTRIA_E_COMERCIO ,utilidades_domesticas
+products,product_name_lenght,INTEGER,0,172,60,-1,72
+products,product_description_lenght,INTEGER,0,173,2261,-1,3992
+products,product_photos_qty,INTEGER,0,436,18,-1,18
+products,product_weight_g,REAL,0,221,1423,-30000.0,23600000.0
+products,product_length_cm,REAL,0,207,167,-80.0,100000.0
+products,product_height_cm,REAL,0,208,164,-58.0,64000.0
+products,product_width_cm,REAL,0,213,139,-47.0,68000.0
+sellers,seller_id,TEXT,1,0,2071,001cca7ae9ae17fb1caed9dfb1094831,ffff564a4f9085cd26170f4732393726
+sellers,seller_zip_code_prefix,TEXT,0,36,1523,01001,99730
+sellers,seller_city,TEXT,0,41,521,  ALVARES MACHADO ,xaxim
+sellers,seller_state,TEXT,0,42,35, CE  ,zz

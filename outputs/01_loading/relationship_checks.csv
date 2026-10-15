@@ -1,0 +1,11 @@
+check_name,value
+orders_missing_customer,769
+items_missing_order,0
+items_missing_product,910
+items_missing_seller,893
+payments_missing_order,0
+reviews_missing_order,0
+products_missing_category_translation,755
+orders_without_items,142
+orders_without_payments,0
+orders_without_reviews,147

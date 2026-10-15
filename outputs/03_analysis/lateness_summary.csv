@@ -1,0 +1,14 @@
+metric,value,unit
+all_orders,20000,orders
+reliably_labelled_orders,16481,orders
+unlabelled_orders,3519,orders
+late_orders,1107,orders
+on_time_orders,15374,orders
+late_rate,0.067168,proportion
+late_rate_wilson_95_low,0.063447,proportion
+late_rate_wilson_95_high,0.071092,proportion
+median_signed_delay,-12,calendar_days
+median_late_delay,7,calendar_days
+late_delay_q1,3.0,calendar_days
+late_delay_q3,13.0,calendar_days
+maximum_late_delay,188,calendar_days

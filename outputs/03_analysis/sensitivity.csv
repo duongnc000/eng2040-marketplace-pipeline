@@ -1,0 +1,3 @@
+rule,labelled_orders,late_orders,late_rate
+"strict: normalized delivered status, valid target dates, no detected impossible chronology",16481,1107,0.067168
+lenient: normalized delivered status and valid actual/estimate dates only,17273,1107,0.064088

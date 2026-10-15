@@ -1,0 +1,9 @@
+table,row_meaning,primary_key,row_count
+category_translation,one row per product category,product_category_name,73
+customers,one customer record used by an order,customer_id,20000
+order_items,one purchased item/sequence within an order,order_id + order_item_id,22662
+order_payments,one payment record/sequence within an order,order_id + payment_sequential,20875
+order_reviews,one review identifier attached to an order,review_id + order_id,19966
+orders,one marketplace order,order_id,20000
+products,one catalogue product,product_id,11334
+sellers,one seller,seller_id,2071

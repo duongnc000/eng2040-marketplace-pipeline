@@ -1,0 +1,54 @@
+feature,meaning,source,representation,unit,missing_value_policy,available_at_approval
+item_count,number of item rows,order_items.order_id,numeric,count,0 if no item row,yes
+distinct_product_count,distinct products in basket,order_items.product_id,numeric,count,0 if no item row,yes
+distinct_seller_count,distinct sellers in basket,order_items.seller_id,numeric,count,0 if no item row,yes
+basket_price_valid_brl,sum of non-negative item prices,order_items.price,numeric,BRL,0 plus bad-price count,yes
+basket_freight_valid_brl,sum of non-negative item freight,order_items.freight_value,numeric,BRL,0 plus bad-freight count,yes
+bad_price_count,missing or negative item prices,order_items.price,numeric,count,not applicable,yes
+bad_freight_count,missing or negative item freight values,order_items.freight_value,numeric,count,not applicable,yes
+category_count,distinct non-missing product categories,products.product_category_name,numeric,count,0 if unavailable,yes
+avg_product_weight_g,mean positive catalogue weight,products.product_weight_g,numeric,grams,0 plus missing indicator,yes
+avg_product_volume_cm3,mean positive L x H x W,products.product_length_cm; products.product_height_cm; products.product_width_cm,numeric,cubic centimetres,0 plus missing indicator,yes
+product_attributes_missing,one if product weight/volume unavailable,products.product_weight_g; products.product_length_cm; products.product_height_cm; products.product_width_cm,numeric,binary,explicit indicator,yes
+seller_state_count,distinct normalized seller states,sellers.seller_state,numeric,count,0 if unavailable,yes
+same_state_seller_item_fraction,fraction of item sellers in customer state,sellers.seller_state; customers.customer_state; order_items.order_id,numeric,proportion,0 plus missing indicator,yes
+seller_location_missing,one if seller/customer state comparison unavailable,sellers.seller_state; customers.customer_state; order_items.order_id,numeric,binary,explicit indicator,yes
+customer_zip_prefix,numeric customer postcode prefix,customers.customer_zip_code_prefix,numeric,code,0 plus missing indicator,yes
+customer_zip_missing,one if postcode prefix is unavailable/non-numeric,customers.customer_zip_code_prefix,numeric,binary,explicit indicator,yes
+approval_year,local approval year,orders.order_approved_at,numeric,year,0 plus approval-missing indicator,yes
+approval_month,local approval month,orders.order_approved_at,numeric,1-12,0 plus approval-missing indicator,yes
+approval_weekday,local approval weekday; Monday=0,orders.order_approved_at,numeric,0-6,0 plus approval-missing indicator,yes
+approval_hour,local approval clock hour,orders.order_approved_at,numeric,0-23,0 plus approval-missing indicator,yes
+approval_time_missing,one if approval timestamp is missing/invalid,orders.order_approved_at,numeric,binary,explicit indicator,yes
+approval_to_estimate_days,calendar days from approval to estimate,orders.order_approved_at; orders.order_estimated_delivery_date,numeric,calendar days,0 plus missing indicator,yes
+approval_to_estimate_missing,one if interval cannot be computed reliably,orders.order_approved_at; orders.order_estimated_delivery_date,numeric,binary,explicit indicator,yes
+purchase_to_approval_hours,elapsed local-clock hours from purchase to approval,orders.order_purchase_timestamp; orders.order_approved_at,numeric,hours,0 plus missing indicator,yes
+purchase_to_approval_missing,one if interval cannot be computed reliably,orders.order_purchase_timestamp; orders.order_approved_at,numeric,binary,explicit indicator,yes
+customer_state_AC,customer state is AC,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_AL,customer state is AL,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_AP,customer state is AP,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_AM,customer state is AM,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_BA,customer state is BA,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_CE,customer state is CE,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_DF,customer state is DF,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_ES,customer state is ES,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_GO,customer state is GO,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_MA,customer state is MA,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_MT,customer state is MT,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_MS,customer state is MS,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_MG,customer state is MG,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_PA,customer state is PA,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_PB,customer state is PB,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_PR,customer state is PR,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_PE,customer state is PE,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_PI,customer state is PI,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_RJ,customer state is RJ,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_RN,customer state is RN,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_RS,customer state is RS,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_RO,customer state is RO,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_RR,customer state is RR,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_SC,customer state is SC,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_SP,customer state is SP,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_SE,customer state is SE,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_TO,customer state is TO,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes
+customer_state_UNKNOWN,customer state is UNKNOWN,customers.customer_state,one-hot binary,binary,missing/invalid state maps to UNKNOWN,yes

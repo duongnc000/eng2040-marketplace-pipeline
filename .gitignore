@@ -1,0 +1,43 @@
+# Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pipeline_tmp/
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated local files
+marketplace.sqlite
+output.txt
+*.log
+
+# Learning and verification versions
+marketplace_pipeline_scratch/
+_fresh_verification/
+
+# Personal development and revision notes
+PIPELINE_COMPARISON.md
+ORAL_EXAM_GUIDE.md
+
+# Assignment instructions supplied with the project
+assignment_01_brief.pdf
+assignment_01_coding_brief.md
+
+# Report deliverables are submitted separately
+report/
+outputs/report/
+
+# LaTeX temporary files
+*.aux
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
