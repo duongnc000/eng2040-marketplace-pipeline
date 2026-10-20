@@ -62,14 +62,14 @@ Each stage exposes one main function; stage-specific details remain inside its m
 
 ## Evidence and interpretation
 
-The exact numerical evidence is in the numbered stage folders. Findings apply only to this modified extract; associations do not establish causation.
+Results and supporting evidence are saved in the numbered `outputs/` folders, including checks, SQL, environment details, and resource measurements. Findings describe this modified extract; associations do not establish causation.
 
-`outputs/05_documentation/resources.csv` compares estimates with step runtime, new Python allocations (`tracemalloc`), sampled whole-process resident memory (RSS, including native and retained allocations), reachable retained-input/result Python container sizes (shared references counted once), and saved file sizes. RSS and temporary files are sampled about every 20 ms, so brief peaks can be missed. RSS is measured on Windows/Linux and left blank on unsupported platforms. The RSS planning estimate is starting RSS plus the stage's planned Python allocation budget. Container sizes exclude native buffers and other objects outside the named roots.
+`outputs/05_documentation/resources.csv` compares estimated and measured resource use. Python allocations, process resident memory, retained data, and temporary storage have different measurement scopes. Sampling occurs approximately every 20 ms and can miss brief peaks. See the CSV's scope descriptions and `marketplace_pipeline/monitoring.py` for details. Database setup explicitly distinguishes fresh import from reuse.
 
-Temporary files are redirected into `.pipeline_tmp/`; sampling covers that run directory plus SQLite journal/WAL/SHM files beside the database, not unrelated OS/library caches. Temporary scope is restored and the run directory cleaned after each step. Final resource-log and resource-table writing, container-size snapshots and orchestration are outside the recorded stage runtime. Setup explicitly records `fresh_import` or `reused`; a reused database's size is existing storage, not newly written data. Existing databases are trusted, and source/database SHA256 hashes are recorded for comparison.
+Run the focused regression tests with:
 
-The SQL inventory records distinct statements actually executed, including profiling and validation. Source INSERT statements are supplied in `data/raw.sql` rather than duplicated in the inventory. Feature sources are listed by exact table/column; checks enforce the approved manifest, read back both feature exports, compare IDs/labels/values against source order positions, and verify the saved audit IDs. Source declarations and automated checks supplement manual inspection; they do not prove all possible correctness or leakage properties.
-
-Run the focused regression tests with `uv run python -m unittest discover -s tests -v`.
+```sh
+uv run python -m unittest discover -s tests -v
+```
 
 The lecturer's original assignment brief remains authoritative and is supplied separately.
